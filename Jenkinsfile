@@ -22,7 +22,7 @@ pipeline {
                     // Stop old container if running
                     sh 'docker rm -f devops-test-app || true'
                     // Run new container
-                    sh 'docker run -d -p 5000:500 --name devops-test-app devops-test-app:latest'
+                    sh 'docker run -d -p 5000:5000 --name devops-test-app devops-test-app:latest'
                 }
             }
         }
